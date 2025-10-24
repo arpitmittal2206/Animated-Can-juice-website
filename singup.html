@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="shortcut icon" href="./image/Orange.png" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-image: url(./image/background.png);
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-container {
+            background-image: url(./image/Orange.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 100%;
+            max-width: 400px;
+            animation: slideIn 1s ease-in-out, fadeIn 1s ease-in-out;
+        }
+
+        h2 {
+            text-align: center;
+            color: #E05A11;
+            font-size: 50px;
+            margin-bottom: 20px;
+            animation: fadeInText 1.5s ease-in-out;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+            animation: fadeInInput 1s ease-in-out;
+        }
+
+        .input-group label {
+            font-weight: 500;
+            color: #4E3B31;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #E0E0E0;
+            border-radius: 5px;
+            font-size: 16px;
+            color: #4E3B31;
+            transition: all 0.3s ease;
+        }
+
+        .input-group input:focus {
+            border-color: #FF6A13;
+            box-shadow: 0 0 8px rgba(255, 106, 19, 0.5);
+            outline: none;
+        }
+
+        .submit-btn {
+      width: 100%; 
+      margin-left: 20px;
+      max-width: 300px; 
+    padding: 12px;
+    background-color: #FF6A13;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+        .submit-btn:hover {
+            background-color: #E05A11;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            0% {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInInput {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form action="#" method="POST" class="sign-up-form">
+            <h2>Singup</h2>
+            <div class="input-group">
+                <label for="name">name</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name">
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required placeholder="Enter your password">
+            </div>
+           <button id="submit" class="submit-btn" onclick="Swal.fire()">Click</button>
+        </form>
+    </div>
+    <script type="module" src="Singup.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
